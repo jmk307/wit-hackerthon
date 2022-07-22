@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:8000/exercise
     driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:8000/exercise
     username: jimin
     password: simon1126
   jpa:
