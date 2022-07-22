@@ -17,8 +17,9 @@ public class HomeController {
     @PostMapping
     public String androidResponse(@RequestBody User user) {
         logger.info("Connection from Android");
-        logger.info("id: " + user.getId() + ", pw: " + user.getPassword());
+        logger.info(user.getId());
+        logger.info(user.getPassword());
 
-        return "1";
+        return "성공!";
     }
 }
