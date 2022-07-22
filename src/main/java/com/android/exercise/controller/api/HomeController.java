@@ -7,17 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value = "android")
 public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-    @GetMapping
-    public String test() {
-        return "성공!!!!";
-    }
-
-    @PostMapping
+    @PostMapping(value = "android")
     @ResponseBody
     public String androidResponse(@RequestBody User user) {
         logger.info("Connection from Android");
