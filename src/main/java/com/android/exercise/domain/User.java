@@ -5,7 +5,6 @@ import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class User {
@@ -16,5 +15,9 @@ public class User {
     public User(String userId, String password) {
         this.id = userId;
         this.password = password;
+    }
+
+    public String toString() {
+        return String.format("User[userId:%s, password: %s]", id, password);
     }
 }
