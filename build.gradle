@@ -28,6 +28,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.3.0'
 }
 
 tasks.named('test') {

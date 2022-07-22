@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:8000/exercise
+    url: jdbc:mariadb://wit-hackerthon2.cpadiqsprb8b.ap-northeast-2.rds.amazonaws.com:3306/exercise
     username: jimin
-    password: simon1126
+    password: rejin0421
   jpa:
     hibernate:
       database-platform: org.hibernate.dialect.MariaDB103Dialect
