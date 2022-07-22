@@ -17,7 +17,7 @@ public class HomeController {
         logger.info(user.getId());
         logger.info(user.getPassword());
 
-        return "성공!";
+        return user.getId();
     }
 
     @GetMapping
