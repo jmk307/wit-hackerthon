@@ -2,6 +2,9 @@ server:
   port: 3333
 
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://wit-hackerthon2.cpadiqsprb8b.ap-northeast-2.rds.amazonaws.com:3306/exercise
@@ -9,9 +12,7 @@ spring:
     password: rejin0421
   jpa:
     hibernate:
-      database-platform: org.hibernate.dialect.MariaDB103Dialect
       ddl-auto: update
-      show-sql: 'true'
     properties:
       hibernate:
         format_sql: true
