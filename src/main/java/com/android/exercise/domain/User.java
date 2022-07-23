@@ -1,25 +1,28 @@
 package com.android.exercise.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
-    private String id;
-    private String password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long userId;
 
-    public User() {}
+    private String nickname;
 
-    public User(String userId, String password) {
-        this.id = userId;
-        this.password = password;
-    }
+    private String result;
 
-    public String getId() {
-        return id;
-    }
+    @OneToOne
+    @JoinColumn(name="plantId")
+    private Plant plant;
 
-    public String getPassword() {
-        return password;
-    }
-
-    public String toString() {
-        return String.format("User[userId:%s, password: %s]", id, password);
-    }
 }
