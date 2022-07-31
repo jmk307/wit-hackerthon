@@ -5,7 +5,6 @@ import com.android.exercise.domain.Member;
 import com.android.exercise.domain.Plant;
 import com.android.exercise.dto.member.MemberDto;
 import com.android.exercise.exception.DuplicateMemberException;
-import com.android.exercise.repository.ChallengeRepository;
 import com.android.exercise.repository.MemberRepository;
 import com.android.exercise.util.SecurityUtil;
 import lombok.RequiredArgsConstructor;
