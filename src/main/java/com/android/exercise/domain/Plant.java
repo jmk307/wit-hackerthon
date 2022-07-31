@@ -24,5 +24,11 @@ public class Plant {
     private Long totalExp;
 
     @OneToOne(mappedBy = "plant")
-    private User user;
+    private Member member;
+
+    public void update(Long totalExp) {
+        this.totalExp += totalExp;
+    }
+
+    public void updateName(String plantName) { this.plantName = plantName; }
 }

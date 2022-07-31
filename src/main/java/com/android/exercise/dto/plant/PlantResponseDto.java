@@ -18,7 +18,7 @@ public class PlantResponseDto {
     public PlantResponseDto(Plant plant) {
         this.plantId = plant.getPlantId();
         this.plantName = plant.getPlantName();
-        this.level = "씨앗";
-        this.totalExp = 0L;
+        this.level = plant.getLevel();
+        this.totalExp = plant.getTotalExp();
     }
 }
